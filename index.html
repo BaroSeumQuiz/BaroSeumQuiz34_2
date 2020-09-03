@@ -48,6 +48,12 @@
    <div id="wrongq20" style="display:none;">
      Q10. 정다면체인 것의 기호를 쓰세요. <a href="javascript:wrongquizshow(20);" style="font-weight:bold;">다시풀기</a><br></br>
    </div>
+   <div id="wrongq21" style="display:none;">
+     Q11. 정삼각형끼리, 이등변삼각형끼리 묶인 것을 고르세요. <a href="javascript:wrongquizshow(21);" style="font-weight:bold;">다시풀기</a><br></br>
+   </div>
+   <div id="wrongq22" style="display:none;">
+     Q12. 칠교판에서 정삼각형은 모두 몇 개 사용되었는지 고르세요. <a href="javascript:wrongquizshow(22);" style="font-weight:bold;">다시풀기</a><br></br>
+   </div>
  </font>
 </div>
 
@@ -425,12 +431,74 @@
   <img src="/BaroSeumQuiz34_2/images/checkbtn.png" onclick="myFucntion20()"/>
 </form>
 <!--다음페이지-->
-<img id="nextq20" style="display:inline;" src="/BaroSeumQuiz34_2/images/wrongcheckbtn.png" onclick="gonext(this)"/>
+<img id="nextq20" style="display:inline;" src="/BaroSeumQuiz34_2/images/nextbtn.png" onclick="gonext(this)"/>
 <img id="wrongnextq20" style="display:none;" src="/BaroSeumQuiz34_2/images/wrongnextbtn.png" onclick="wrongquizshow(this)"/>
 
 </div>
 </div>
 </div>
+
+<!--주관식 문제소개11-->
+ <div id="cho21" style="display:none;" >
+<div id = "quizstart" style="height: auto; width:615px; border-bottom:2px double orange;">
+  <img style="margin-left:20px" src="/BaroSeumQuiz34_2/images/quiz11.png" />
+<p style="margin-left:20px; font-size:20pt; font-family:굴림; font-weight:bold" >
+  Q11. <br>문제를 읽고 답을 구해보세요.
+</p>
+<form name="form21" style="margin-left:20px">
+  <font size=5px; >
+  <label><input type="radio" name="quiz21" value="v1"> 정삼각형:다,라 이등변: 가, 나, 마</label></br>
+  <label><input type="radio" name="quiz21" value="v2"> 정삼각형:가,라 이등변: 나, 다, 마</label><br>
+  <label><input type="radio" name="quiz21" value="v3"> 정삼각형:다,마 이등변: 가, 나, 라</label><br>
+ </font>
+ <div id="checktrue21" style="margin:0px 0 0 0px; display:none;" >
+   <img src="/BaroSeumQuiz12_1/images/checktrue.png"/>
+ </div>
+ <div id="checkfalse21" style="margin:0px 0 0 0px; display:none;" >
+   <img src="/BaroSeumQuiz12_1/images/checkflase.png"/>
+ </div>
+ <div id="check-next" style="margin:20px 0 0 250px; display:inline;">
+ <!--정답확인-->
+  <img src="/BaroSeumQuiz12_1/images/checkbtn.png" onclick="myFucntion21()"/>
+</form>
+<!--다음페이지-->
+<img id="nextq21" style="display:inline;" src="/BaroSeumQuiz12_1/images/nextbtn.png" onclick="gonext(this)"/>
+<img id="wrongnextq21" style="display:none;" src="/BaroSeumQuiz12_1/images/wrongnextbtn.png" onclick="wrongquizshow(this)"/>
+
+</div>
+</div>
+</div>
+
+<div id="cho22" style="display:none;" >
+<div id = "quizstart" style="height: auto; width:615px; border-bottom:2px double orange;">
+ <img style="margin-left:20px" src="/BaroSeumQuiz34_2/images/quiz12.png" />
+<p style="margin-left:20px; font-size:20pt; font-family:굴림; font-weight:bold" >
+ Q12. <br>단위분수인 것의 번호를 써보세요.
+</p>
+<form name="form22" style="margin-left:20px">
+ <font size=5px; >
+   <label><input type="radio" name="quiz22" value="v1"> 6가지</label></br>
+   <label><input type="radio" name="quiz22" value="v2"> 7가지</label><br>
+   <label><input type="radio" name="quiz22" value="v3"> 8가지</label><br>
+</font>
+<div id="checktrue22" style="margin:0px 0 0 0px; display:none;" >
+  <img src="/BaroSeumQuiz12_1/images/checktrue.png"/>
+</div>
+<div id="checkfalse22" style="margin:0px 0 0 0px; display:none;" >
+  <img src="/BaroSeumQuiz12_1/images/checkflase.png"/>
+</div>
+<div id="check-next" style="margin:20px 0 0 250px; display:inline;">
+<!--정답확인-->
+ <img src="/BaroSeumQuiz12_1/images/checkbtn.png" onclick="myFucntion22()"/>
+</form>
+<!--다음페이지-->
+<img id="nextq30" style="display:inline;" src="/BaroSeumQuiz12_1/images/wrongcheckbtn.png" onclick="gonext(this)"/>
+<img id="wrongnextq22" style="display:none;" src="/BaroSeumQuiz12_1/images/wrongnextbtn.png" onclick="wrongquizshow(this)"/>
+
+</div>
+</div>
+</div>
+
 
 
 </div>
@@ -580,6 +648,33 @@
    }
   }
 
+  function myFucntion21() {
+   checkresult_set(21)
+   /*
+   if(form11.quiz20.value=="20")
+   if(form11.quiz20[1].checked==true)
+   */
+    if(form21.quiz21[2].checked==true){
+  checkresult_true(21);
+   }else{
+     wrongcheckcnt[10] = 1;
+     checkresult_flase(21);
+   }
+  }
+
+  function myFucntion22() {
+   checkresult_set(22)
+   /*
+   if(form11.quiz20.value=="20")
+   if(form11.quiz20[1].checked==true)
+   */
+    if(form22.quiz22[1].checked==true){
+  checkresult_true(22);
+   }else{
+     wrongcheckcnt[11] = 1;
+     checkresult_flase(22);
+   }
+  }
 
    function gonext(id){
     var num = (id.id).substr(5,2);
@@ -595,6 +690,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==12){
@@ -608,6 +705,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==13){
@@ -621,6 +720,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==14){
@@ -634,6 +735,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==15){
@@ -647,6 +750,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==16){
@@ -660,6 +765,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==17){
@@ -673,6 +780,8 @@
      document.getElementById('cho18').style.display='block';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==18){
@@ -686,6 +795,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='block';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
     }
 
     if(num==19){
@@ -699,6 +810,8 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='block';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
 
     }
 
@@ -713,6 +826,40 @@
      document.getElementById('cho18').style.display='none';
      document.getElementById('cho19').style.display='none';
      document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='block';
+     document.getElementById('cho22').style.display='none';
+
+    }
+
+    if(num==21){
+     document.getElementById('cho11').style.display='none';
+     document.getElementById('cho12').style.display='none';
+     document.getElementById('cho13').style.display='none';
+     document.getElementById('cho14').style.display='none';
+     document.getElementById('cho15').style.display='none';
+     document.getElementById('cho16').style.display='none';
+     document.getElementById('cho17').style.display='none';
+     document.getElementById('cho18').style.display='none';
+     document.getElementById('cho19').style.display='none';
+     document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='block';
+
+    }
+
+    if(num==30){
+     document.getElementById('cho11').style.display='none';
+     document.getElementById('cho12').style.display='none';
+     document.getElementById('cho13').style.display='none';
+     document.getElementById('cho14').style.display='none';
+     document.getElementById('cho15').style.display='none';
+     document.getElementById('cho16').style.display='none';
+     document.getElementById('cho17').style.display='none';
+     document.getElementById('cho18').style.display='none';
+     document.getElementById('cho19').style.display='none';
+     document.getElementById('cho20').style.display='none';
+     document.getElementById('cho21').style.display='none';
+     document.getElementById('cho22').style.display='none';
      document.getElementById('wrongcheck').style.display='block';
      for(var i=0; i<wrongcheckcnt.length; i++){
        if(wrongcheckcnt[i] == 1){
@@ -748,7 +895,7 @@
   }
 
   function wrongquizshow(x){
-    gonext(nextq20);
+    gonext(nextq30);
     var con3 = document.getElementById("cho"+x);
      con3.style.display = 'block';
 
